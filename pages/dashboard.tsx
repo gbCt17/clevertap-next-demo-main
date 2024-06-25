@@ -7,10 +7,13 @@ const DashboardPage = () => {
     const showAlert = () => {
         alert('Button on Dashboard clicked!');
       };
-    if (clevertap || window.clevertap) {
-        
-        clevertap.event.push('from dashboard Test')
-        // Fire event
+   
+        if (typeof window !== 'undefined' && (window.clevertap || window.clevertap !== undefined)) {
+            
+            window.clevertap.event.push('Test_custom');
+            // Fire event
+        } else {
+            console.warn('CleverTap is not defined');
         }
     
   };
