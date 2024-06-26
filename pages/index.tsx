@@ -51,7 +51,7 @@ export default function Home() {
       <Script>
           {`
             var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
-            clevertap.account.push({ "id": "TEST-487-669-RW7Z" });
+            clevertap.account.push({ "id": "CLEVERTAP_ACCOUNT_ID" });//Replace this with your account id 
             clevertap.dismissSpamControl = true;
             clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
             clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agrees to share their IP data
